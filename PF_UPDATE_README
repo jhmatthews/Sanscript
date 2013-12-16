@@ -1,0 +1,20 @@
+As new versions of python are written, the parameter files for python have changed .  The routine pf_update.py is intended to help with rewriting pf files after such changes.  To run, the routine needs to be added directly to your PATH.   It works for situations where new keywords are added in the new version; it will not work if the keywords are out of order.   The routine was written explicitly to handle a situation where one has a grid of old pf files and wants to create a grid on new pf files.
+
+To use the program:
+
+Create a parameter file, e. g. base.pf, with the new version of the code.
+Create a list of the parameter files that you wish to update, e.g. ls orig*.pf >files.ls
+Run pf update.py, e.g. pf_update.py base.pf files.ls
+The routine will keep values of the keywords that appeared in the original pf files if it can identify them.  It will use values in base.pf if it cannot find them there.
+
+Note:
+
+Consistent with current version of kpar, a keyword is defined by words up to but not including the open parenthesis.  That a line which reads:
+wind.type(1=spherical,2=cylindrical)
+is identical to the keyword
+wind.type(1=rectangular,2=spherical,3=cylindrical)
+In this case, the new pf files will take the value from the original pf file, but write out the "choices" from the new version.
+This routine could doubtlessly be improved.  Please add updated versions below, indicating how it has changed.   The names should probably be different so the old version is not overwritten
+
+
+(taken from confluence site)

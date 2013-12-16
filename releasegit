@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# BASH script for making gitreleases
+
+VERSION=$1
+
+echo 'test'
+exit 1
+echo 'test'
+git checkout progs
+git status
+git commit -am 'v$(VERSION) Commit'
+git tag -a v$(VERSION) -m "Python $(VERSION) Release"
+git push origin progs
+git push --tags
+

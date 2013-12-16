@@ -1,0 +1,21 @@
+ibin   20	#ibin
+lmin   800	#lmin
+lmax  1600	#lmax
+norm   0	#normalisation on or off
+title   notitle
+plot   6	#plot number
+label   $70^\circ$   #plot number
+plot   7      #plot number
+label   $80^\circ$        #plot number
+rcparamstr font.family serif
+rcparamstr axes.edgecolor black
+rcparamfl lines.linewidth 1.2
+rcparamfl axes.linewidth 1.5
+rcparamint xtick.major.size 8      # major tick size in points
+rcparamint ytick.major.size 8     # major tick size in points
+rcparamstr axes.edgecolor black
+rcparamstr axes.edgecolor black
+xlabel $\lambda$
+ylabel Flux (arb)
+format png
+rcparamfl lines.markeredgewidth 1.0
